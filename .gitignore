@@ -1,0 +1,34 @@
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+
+# Build directories
+/bin/
+/build/
+/out/
+
+# Logs and temp files
+*.log
+*.tmp
+*.cache
+*.out
+
+# IDE and editor folders
+.vscode/
+.idea/
+*.swp
+
+# Environment variables
+.env
+.env.local
+
+# Dependencies
+vendor/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
