@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "367be9d0-e498-487c-af2b-d87b72c28b9c",
+		"name": "assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47899485",
+		"_collection_link": "https://divyanshu-mani-s-team.postman.co/workspace/Team-Workspace~a3a3d0ab-3795-4d88-8a31-55d400a14d98/collection/47899485-367be9d0-e498-487c-af2b-d87b72c28b9c?action=share&source=collection_link&creator=47899485"
+	},
+	"item": [
+		{
+			"name": "reward",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": 1,\r\n  \"stockSymbol\": \"RELIANCE\",\r\n  \"shares\": 2.5\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/reward",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reward"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Todays stock",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"id\": 1,\r\n    \"userId\": 1,\r\n    \"stockSymbol\": \"RELIANCE\",\r\n    \"shares\": 2.5,\r\n    \"rewardedAt\": \"2025-11-09T13:12:00Z\"\r\n  }\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/today-stocks/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"today-stocks",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "stats",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"todayShares\": {\r\n    \"RELIANCE\": 2.5\r\n  },\r\n  \"currentPortfolioValueINR\": 3470.25\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/stats/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"stats",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "historicalstats",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  { \"date\": \"2025-11-08\", \"totalValueInINR\": 12600.50 },\r\n  { \"date\": \"2025-11-07\", \"totalValueInINR\": 9500.00 }\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/historical-inr/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"historical-inr",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
